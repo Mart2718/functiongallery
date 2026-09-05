@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Browse and project common parent-function graphs for Math 172 Precalculus.">
+  <title>Common Function Gallery | Math 172</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#gallery">Skip to graphs</a>
+  <header class="site-header">
+    <div>
+      <p class="eyebrow">Math 172 · Precalculus</p>
+      <h1>Common Function Gallery</h1>
+      <p class="intro">Browse the parent functions you should recognize. Select any collection to enlarge it for closer study or classroom projection.</p>
+    </div>
+    <button class="projection-button" id="projectionButton" type="button" aria-pressed="false">
+      <span aria-hidden="true">▣</span> Projection mode
+    </button>
+  </header>
+
+  <nav class="mode-nav" aria-label="Choose a learning mode">
+    <button class="mode-button active" type="button" data-mode="browse" aria-pressed="true">Browse graphs</button>
+    <button class="mode-button" type="button" data-mode="identify" aria-pressed="false">Identify a function</button>
+    <button class="mode-button" type="button" data-mode="transform" aria-pressed="false">Transformation Lab</button>
+  </nav>
+
+  <nav class="category-nav browse-only" aria-label="Filter function families">
+    <button class="filter active" type="button" data-filter="all" aria-pressed="true">All families</button>
+    <button class="filter" type="button" data-filter="polynomial" aria-pressed="false">Polynomial</button>
+    <button class="filter" type="button" data-filter="other" aria-pressed="false">Other</button>
+    <button class="filter" type="button" data-filter="rational" aria-pressed="false">Rational</button>
+    <button class="filter" type="button" data-filter="exponential" aria-pressed="false">Exponential &amp; logarithmic</button>
+    <button class="filter" type="button" data-filter="trigonometric" aria-pressed="false">Trigonometric</button>
+    <button class="filter" type="button" data-filter="inverse" aria-pressed="false">Inverse trigonometric</button>
+  </nav>
+
+  <main id="gallery" class="gallery browse-only" aria-live="polite">
+    <article class="graph-card" data-family="polynomial">
+      <div class="card-heading"><span class="number">01</span><h2>Polynomial functions</h2></div>
+      <button class="image-button" type="button" data-image="assets/Polygraphs.png" data-title="Polynomial functions">
+        <img src="assets/Polygraphs.png" alt="Graphs of y equals x, x squared, x cubed, and x to the fourth power." width="562" height="681">
+        <span class="enlarge">Enlarge</span>
+      </button>
+    </article>
+
+    <article class="graph-card" data-family="other">
+      <div class="card-heading"><span class="number">02</span><h2>Other essential functions</h2></div>
+      <button class="image-button" type="button" data-image="assets/OtherFunctions.png" data-title="Other essential functions">
+        <img src="assets/OtherFunctions.png" alt="Graphs of the absolute value function and square root function." width="552" height="345">
+        <span class="enlarge">Enlarge</span>
+      </button>
+    </article>
+
+    <article class="graph-card" data-family="rational">
+      <div class="card-heading"><span class="number">03</span><h2>Rational functions</h2></div>
+      <button class="image-button" type="button" data-image="assets/RationalGraphs.png" data-title="Rational functions">
+        <img src="assets/RationalGraphs.png" alt="Graphs of y equals one over x, one over x squared, one over x cubed, and one over x to the fourth power, with asymptotes shown." width="552" height="699">
+        <span class="enlarge">Enlarge</span>
+      </button>
+    </article>
+
+    <article class="graph-card" data-family="exponential">
+      <div class="card-heading"><span class="number">04</span><h2>Exponential &amp; logarithmic</h2></div>
+      <button class="image-button" type="button" data-image="assets/ExpoLogGraphs.png" data-title="Exponential and logarithmic functions">
+        <img src="assets/ExpoLogGraphs.png" alt="Graphs of base-two and natural exponential functions and their logarithmic counterparts." width="560" height="685">
+        <span class="enlarge">Enlarge</span>
+      </button>
+    </article>
+
+    <article class="graph-card" data-family="trigonometric">
+      <div class="card-heading"><span class="number">05</span><h2>Sine, cosine, secant &amp; cosecant</h2></div>
+      <button class="image-button" type="button" data-image="assets/Trig1Graphs.png" data-title="Sine, cosine, secant, and cosecant">
+        <img src="assets/Trig1Graphs.png" alt="Graphs of sine, cosecant, cosine, and secant functions, with vertical asymptotes shown." width="562" height="665">
+        <span class="enlarge">Enlarge</span>
+      </button>
+    </article>
+
+    <article class="graph-card compact" data-family="trigonometric">
+      <div class="card-heading"><span class="number">06</span><h2>Tangent &amp; cotangent</h2></div>
+      <button class="image-button" type="button" data-image="assets/Trig2Graphs.png" data-title="Tangent and cotangent">
+        <img src="assets/Trig2Graphs.png" alt="Graphs of tangent and cotangent functions, with vertical asymptotes shown." width="562" height="344">
+        <span class="enlarge">Enlarge</span>
+      </button>
+    </article>
+
+    <article class="graph-card" data-family="inverse">
+      <div class="card-heading"><span class="number">07</span><h2>Inverse sine, cosine, secant &amp; cosecant</h2></div>
+      <button class="image-button" type="button" data-image="assets/InverseTrigGraphs.png" data-title="Inverse sine, cosine, secant, and cosecant">
+        <img src="assets/InverseTrigGraphs.png" alt="Graphs of inverse sine, inverse cosecant, inverse cosine, and inverse secant functions." width="562" height="665">
+        <span class="enlarge">Enlarge</span>
+      </button>
+    </article>
+
+    <article class="graph-card compact" data-family="inverse">
+      <div class="card-heading"><span class="number">08</span><h2>Inverse tangent &amp; cotangent</h2></div>
+      <button class="image-button" type="button" data-image="assets/InverseTrig2Graphs.png" data-title="Inverse tangent and cotangent">
+        <img src="assets/InverseTrig2Graphs.png" alt="Graphs of inverse tangent and inverse cotangent functions, with horizontal asymptotes shown." width="562" height="322">
+        <span class="enlarge">Enlarge</span>
+      </button>
+    </article>
+  </main>
+
+  <section id="identifyMode" class="learning-mode identify-mode" hidden aria-labelledby="identifyTitle">
+    <div class="mode-intro">
+      <p class="eyebrow">Retrieval practice</p>
+      <h2 id="identifyTitle">Identify the Function</h2>
+      <p>Study the graph without its caption. Choose the equation that matches its shape and key features.</p>
+    </div>
+    <div class="challenge-shell">
+      <div class="challenge-visual">
+        <canvas id="challengeCanvas" width="540" height="390" role="img" aria-label="A mystery function graph"></canvas>
+      </div>
+      <div class="challenge-panel">
+        <div class="challenge-status">
+          <span id="challengeCount">Question 1</span>
+          <span id="challengeScore">0 correct</span>
+        </div>
+        <fieldset id="answerChoices">
+          <legend>Which function is shown?</legend>
+        </fieldset>
+        <p id="challengeFeedback" class="challenge-feedback" aria-live="polite">Choose an answer when you are ready.</p>
+        <button id="nextChallenge" class="primary-action" type="button" disabled>Next graph</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="transformMode" class="learning-mode transform-mode" hidden aria-labelledby="transformTitle">
+    <div class="mode-intro">
+      <p class="eyebrow">Transformation Lab</p>
+      <h2 id="transformTitle">What changes—and what stays the same?</h2>
+      <p>Explore <strong>y = a·f(±(x − h)) + k</strong>. The gray curve is the parent function; the red curve is its transformation.</p>
+    </div>
+    <div class="transform-shell">
+      <div class="transform-graph">
+        <canvas id="transformCanvas" width="760" height="500" role="img" aria-label="Interactive parent function and transformed function graph"></canvas>
+        <div class="graph-key" aria-hidden="true"><span class="parent-key"></span>Parent <span class="transform-key"></span>Transformed</div>
+      </div>
+      <div class="transform-controls">
+        <label for="parentFunction">Parent function</label>
+        <select id="parentFunction">
+          <option value="quadratic">f(x) = x²</option>
+          <option value="absolute">f(x) = |x|</option>
+          <option value="linear">f(x) = x</option>
+          <option value="cubic">f(x) = x³</option>
+          <option value="sqrt">f(x) = √x</option>
+          <option value="reciprocal">f(x) = 1/x</option>
+          <option value="exponential">f(x) = 2ˣ</option>
+        </select>
+        <label class="reflection-control" for="reflectY">
+          <input id="reflectY" type="checkbox">
+          <span><strong>Reflect across the y-axis</strong><small>Replace the input with its opposite: f(−x)</small></span>
+        </label>
+        <label for="aControl">Vertical scale/reflection: <output id="aValue">a = 1</output></label>
+        <input id="aControl" type="range" min="-3" max="3" step="0.5" value="1">
+        <label for="hControl">Horizontal shift: <output id="hValue">h = 0</output></label>
+        <input id="hControl" type="range" min="-5" max="5" step="1" value="0">
+        <label for="kControl">Vertical shift: <output id="kValue">k = 0</output></label>
+        <input id="kControl" type="range" min="-5" max="5" step="1" value="0">
+        <div class="formula-card">
+          <span>Current equation</span>
+          <strong id="transformFormula">y = x²</strong>
+        </div>
+        <button id="resetTransform" class="secondary-action" type="button">Reset transformation</button>
+        <div class="notice-box">
+          <strong>Notice</strong>
+          <p id="transformNotice">The transformed graph matches the parent function.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="calculator-section browse-only" aria-labelledby="calculatorTitle">
+    <div class="calculator-heading">
+      <div>
+        <p class="eyebrow">Explore and compare</p>
+        <h2 id="calculatorTitle">Try it in Desmos</h2>
+        <p>Enter a parent function, then change its coefficients or constants. Compare what moves, stretches, reflects, or changes shape.</p>
+      </div>
+      <div class="calculator-actions">
+        <button class="expand-calculator" id="expandCalculator" type="button" aria-pressed="false">Expand calculator</button>
+        <a class="open-desmos" href="https://www.desmos.com/calculator" target="_blank" rel="noopener">Open in a new tab <span aria-hidden="true">↗</span></a>
+      </div>
+    </div>
+    <div class="calculator-frame">
+      <iframe
+        src="https://www.desmos.com/calculator?embed"
+        title="Desmos graphing calculator"
+        loading="lazy"
+        allowfullscreen
+      ></iframe>
+    </div>
+    <p class="expand-hint">When expanded, press Esc or select “Return to gallery” to close the large calculator view.</p>
+  </section>
+
+  <footer>
+    <div class="attribution">
+      <p class="attribution-label">Open educational resource attribution</p>
+      <p>Original source: <a href="https://library.tbil.org/2026/precalculus/instructor/graphs-of-common-functions.html" target="_blank" rel="noopener">“Graphs of Common Functions,” TBIL Precalculus</a>. The graph images are reproduced from this Team-Based Inquiry Learning open educational resource.</p>
+      <p><a href="https://library.tbil.org/2026/precalculus/instructor/attribution.html" target="_blank" rel="noopener">View the TBIL source’s complete attribution, acknowledgements, and licensing information <span aria-hidden="true">↗</span></a></p>
+    </div>
+    <p class="desmos-credit">Interactive calculator provided by <a href="https://www.desmos.com/calculator" target="_blank" rel="noopener">Desmos Studio</a>.</p>
+  </footer>
+
+  <dialog id="viewer" aria-labelledby="viewerTitle">
+    <div class="dialog-bar">
+      <div><p class="eyebrow">Function family</p><h2 id="viewerTitle"></h2></div>
+      <button class="close-button" type="button" aria-label="Close enlarged graph">Close <span aria-hidden="true">×</span></button>
+    </div>
+    <div class="viewer-canvas"><img id="viewerImage" alt=""></div>
+    <p class="dialog-hint">Press Esc or select Close to return to the gallery.</p>
+  </dialog>
+
+  <script src="script.js"></script>
+</body>
+</html>
