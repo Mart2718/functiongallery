@@ -141,29 +141,13 @@ button { font: inherit; }
 .notice-box { margin-top: .45rem; padding: .8rem; border-radius: .7rem; background: #1d1d1f; color: #fff; }
 .notice-box strong { color: #ff7c88; }
 .notice-box p { margin: .25rem 0 0; line-height: 1.4; }
-.calculator-section { max-width: 82rem; margin: 0 auto; padding: 0 clamp(1rem, 4vw, 4rem) 4rem; }
-.calculator-heading { display: flex; align-items: end; justify-content: space-between; gap: 2rem; padding: 1.5rem 0 1rem; border-top: 5px solid var(--green); }
-.calculator-heading > div { max-width: 47rem; }
-.calculator-heading .eyebrow { color: var(--green); }
-.calculator-heading h2 { margin: 0; font-size: clamp(1.8rem, 4vw, 3.2rem); letter-spacing: -.035em; }
-.calculator-heading p:not(.eyebrow) { margin: .55rem 0 0; color: var(--muted); font-size: 1rem; line-height: 1.55; }
-.calculator-actions { display: flex; flex: 0 0 auto; gap: .55rem; align-items: center; }
-.open-desmos, .expand-calculator { padding: .75rem 1rem; border-radius: 999px; font-weight: 800; text-decoration: none; cursor: pointer; }
-.open-desmos { border: 1px solid var(--line); background: #fff; color: var(--ink); }
-.expand-calculator { border: 0; background: var(--green); color: #fff; }
-.open-desmos:hover, .open-desmos:focus-visible, .expand-calculator:hover, .expand-calculator:focus-visible { outline: 3px solid rgba(227,36,54,.4); outline-offset: 3px; }
-.expand-calculator:hover, .expand-calculator:focus-visible { background: #8f1723; }
-.calculator-frame { overflow: hidden; min-height: 42rem; border: 1px solid var(--line); border-radius: 1rem; background: #fff; box-shadow: var(--shadow); }
-.calculator-frame iframe { display: block; width: 100%; height: min(76vh, 52rem); min-height: 42rem; border: 0; }
-.expand-hint { margin: .6rem 0 0; color: var(--muted); font-size: .82rem; }
-.calculator-section.expanded { position: fixed; inset: 0; z-index: 40; max-width: none; padding: .8rem; background: #ededee; }
-.calculator-section.expanded .calculator-heading { height: 4.5rem; padding: .4rem .5rem .65rem; border-top: 0; }
-.calculator-section.expanded .calculator-heading > div p { display: none; }
-.calculator-section.expanded .calculator-heading h2 { font-size: 1.4rem; }
-.calculator-section.expanded .calculator-frame { height: calc(100vh - 6.1rem); min-height: 0; border-radius: .6rem; }
-.calculator-section.expanded .calculator-frame iframe { height: 100%; min-height: 0; }
-.calculator-section.expanded .expand-hint { display: none; }
-body.calculator-open { overflow: hidden; }
+.desmos-link-section { display: flex; align-items: center; justify-content: space-between; gap: 2rem; max-width: 74rem; margin: 0 auto 4rem; padding: 1.5rem clamp(1.25rem, 3vw, 2rem); border-top: 5px solid var(--green); border-radius: 0 0 1rem 1rem; background: #fff; box-shadow: var(--shadow); }
+.desmos-link-section > div { max-width: 47rem; }
+.desmos-link-section .eyebrow { color: var(--green); }
+.desmos-link-section h2 { margin: 0; font-size: clamp(1.8rem, 4vw, 2.7rem); letter-spacing: -.035em; }
+.desmos-link-section p:not(.eyebrow) { margin: .55rem 0 0; color: var(--muted); font-size: 1rem; line-height: 1.55; }
+.desmos-link-button { flex: 0 0 auto; padding: .85rem 1.1rem; border-radius: 999px; background: var(--green); color: #fff; font-weight: 800; text-align: center; text-decoration: none; }
+.desmos-link-button:hover, .desmos-link-button:focus-visible { background: #8f1723; outline: 3px solid rgba(227,36,54,.4); outline-offset: 3px; }
 footer { padding: 1.5rem clamp(1rem, 4vw, 4rem) 2.5rem; background: #e5e5e7; color: var(--muted); font-size: .88rem; }
 footer a { color: var(--green-dark); font-weight: 750; }
 .attribution { max-width: 70rem; margin: 0 auto; line-height: 1.55; }
@@ -181,7 +165,7 @@ dialog::backdrop { background: rgba(0,0,0,.82); backdrop-filter: blur(4px); }
 .viewer-canvas img { display: block; max-width: 100%; max-height: 100%; width: auto; height: auto; background: #fff; }
 .dialog-hint { margin: 0; padding: .55rem 1rem; color: var(--muted); font-size: .82rem; text-align: center; }
 body.projection .site-header { padding-top: 1rem; padding-bottom: 1rem; }
-body.projection .intro, body.projection .eyebrow, body.projection footer, body.projection .calculator-section, body.projection .mode-nav { display: none; }
+body.projection .intro, body.projection .eyebrow, body.projection footer, body.projection .desmos-link-section, body.projection .mode-nav { display: none; }
 body.projection h1 { font-size: clamp(1.7rem, 3vw, 2.6rem); }
 body.projection .gallery { max-width: 100rem; }
 body.projection .card-heading h2 { font-size: 1.35rem; }
@@ -193,14 +177,8 @@ body.projection .card-heading h2 { font-size: 1.35rem; }
   .challenge-shell, .transform-shell { grid-template-columns: 1fr; }
   .challenge-visual { min-height: 22rem; }
   .transform-graph { min-height: 24rem; }
-  .calculator-heading { align-items: start; flex-direction: column; gap: 1rem; }
-  .calculator-actions { width: 100%; flex-direction: column; align-items: stretch; }
-  .open-desmos, .expand-calculator { text-align: center; }
-  .calculator-frame, .calculator-frame iframe { min-height: 36rem; height: 65vh; }
-  .calculator-section.expanded .calculator-heading { flex-direction: row; align-items: center; height: 4.5rem; }
-  .calculator-section.expanded .calculator-actions { width: auto; }
-  .calculator-section.expanded .open-desmos { display: none; }
-  .calculator-section.expanded .calculator-frame { min-height: 0; height: calc(100vh - 6.1rem); }
+  .desmos-link-section { align-items: stretch; flex-direction: column; margin-right: 1rem; margin-left: 1rem; }
+  .desmos-link-button { width: 100%; }
   .enlarge { opacity: 1; transform: none; }
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; } }

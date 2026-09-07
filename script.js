@@ -5,8 +5,6 @@ const viewerTitle = document.querySelector('#viewerTitle');
 const viewerImage = document.querySelector('#viewerImage');
 const closeButton = document.querySelector('.close-button');
 const projectionButton = document.querySelector('#projectionButton');
-const calculatorSection = document.querySelector('.calculator-section');
-const expandCalculator = document.querySelector('#expandCalculator');
 
 filters.forEach((button) => {
   button.addEventListener('click', () => {
@@ -42,24 +40,6 @@ projectionButton.addEventListener('click', () => {
   projectionButton.innerHTML = active
     ? '<span aria-hidden="true">×</span> Exit projection mode'
     : '<span aria-hidden="true">▣</span> Projection mode';
-});
-
-function setCalculatorExpanded(active) {
-  calculatorSection.classList.toggle('expanded', active);
-  document.body.classList.toggle('calculator-open', active);
-  expandCalculator.setAttribute('aria-pressed', String(active));
-  expandCalculator.textContent = active ? 'Return to gallery' : 'Expand calculator';
-}
-
-expandCalculator.addEventListener('click', () => {
-  setCalculatorExpanded(!calculatorSection.classList.contains('expanded'));
-});
-
-document.addEventListener('keydown', (event) => {
-  if (event.key === 'Escape' && calculatorSection.classList.contains('expanded')) {
-    setCalculatorExpanded(false);
-    expandCalculator.focus();
-  }
 });
 
 const modeButtons = [...document.querySelectorAll('.mode-button')];
